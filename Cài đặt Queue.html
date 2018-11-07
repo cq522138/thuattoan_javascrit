@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cài đặt Queue</title>
+</head>
+<body>
+<script>
+    var Queue = function () {
+        this.dataStore = [];
+
+        function enqueue(element) {
+            this.dataStore.push(element);
+        }
+
+        function dequeue() {
+            return this.dataStore.shift();
+        }
+
+        function front() {
+            return this.dataStore[0];
+        }
+
+        function back() {
+            return this.dataStore[this.dataStore.length-1];
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Stack() {
+        this.dataStore = [];
+        this.top = 0;
+        this.push = push;
+        this.pop = pop;
+        this.peek = peek;
+        this.length1 = length1;
+        this.clear =clear;
+    }
+
+    function push(element) {
+        this.dataStore[this.top++] = element;
+    }
+
+    function pop() {
+        return this.dataStore[--this.top];
+    }
+
+    function peek() {
+        return this.dataStore[this.top-1];
+    }
+
+    function length1() {
+        return this.top;
+    }
+
+    function clear() {
+        this.top = 0;
+    }
+
+    var s = new Stack();
+    s.push("David");
+    s.push("Raymond");
+    s.push("Bryan");
+    console.log("length: "+s.length1());
+    document.write(s.peek());
+    var popped = s.pop();
+
+    document.write("The popped element is: " + popped);
+    document.write(s.peek());
+
+    s.push("Cynthia");
+
+    document.write(s.peek());
+
+    s.clear();
+
+
+    document.write(s.peek());
+
+    s.push("Clayton");
+
+    document.write(s.peek());
+</script>
+</body>
+</html>
